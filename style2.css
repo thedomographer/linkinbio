@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'sigma';
+    src: url(./Moderniz.otf);
+}
+
+@font-face {
+    font-family: 'italic';
+    src: url(./garamontio_it.ttf);
+}
+
+h1
+{
+    font-family: 'sigma';
+}
+
+h2
+{
+    font-family: 'italic';
+}
+body {
+    background-color: #f5f5dc; /* Bézs háttér */
+    color: #333; /* Sötétszürke szöveg */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Kép tartály stílusai */
+  #image-container {
+    margin-top: 20px;
+  }
+  
+  #image {
+    width: 60%; /* Kép szélessége */
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Finom árnyék */
+  }
+  
+  /* Gombok dobozainak stílusai */
+  .buttons {
+    margin-top: 40px;
+    display: block; /* A gombok egymás alatt jelenjenek meg */
+    text-align: center; /* Gombok középre igazítása */
+  }
+  
+  /* Gomb stílus */
+  button {
+    background-color: #000; /* Fekete háttér */
+    color: #fff; /* Fehér szöveg */
+    font-size: 18px;
+    font-family: 'sigma';
+    padding: 15px;
+    margin: 10px 0;
+    width: 30%; /* Gomb szélessége (kb. az oldal harmada) */
+    border: 2px solid #444; /* Sötét szegély */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Gombok állapotai */
+  button:hover {
+    background-color: #333; /* Sötétebb szürke hover állapot */
+  }
+  
+  button:focus {
+    outline: none; /* Kikapcsolja a fókusz keretet */
+  }
+  
+  /* Extra margók a szöveghez és a címhez */
+  h1 {
+    margin-top: 30px;
+    font-size: 36px;
+  }
+  
+  /* Kisebb képernyők esetén a gombok jobban elférjenek */
+  @media (max-width: 768px) {
+    #image {
+      width: 80%; /* Mobilon szélesebb legyen a kép */
+    }
+  
+    button {
+      width: 60%; /* Gombok mobilon szélesebbek */
+    }
+  }
+  

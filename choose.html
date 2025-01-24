@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Image Size</title>
+  <style>
+    @import url(./style2.css);
+  </style>
+</head>
+<body>
+
+  <h1>Not so fast...</h1>
+  <h2>Choose your preferred picture size!</h2>
+  <!-- Kép megjelenítése a query paraméter alapján -->
+  <div id="image-container">
+    <img id="image" src="" alt="Selected Image">
+  </div>
+
+  <div class="buttons">
+    <button id="small">Small</button>
+    <button id="medium">Medium</button>
+    <button id="large">Large</button>
+  </div>
+
+  <script>
+    // Lekérdezzük az URL paramétert, hogy melyik képet kell megjeleníteni
+    const urlParams = new URLSearchParams(window.location.search);
+    const imageId = urlParams.get('image');
+    
+    // A képek és a hozzájuk tartozó linkek forrása
+    const imageSources = {
+      '1': './4vinted.png',
+      '2': './4vinted4.png',
+      '3': './4vinted6.png'
+    };
+
+    const links = {
+      '1': {
+        'small': 'https://www.ebay.com/itm/126889231131',
+        'medium': 'https://www.ebay.com/itm/126900841510',
+        'large': 'https://www.ebay.com/itm/126900856335'
+      },
+      '2': {
+        'small': 'https://www.ebay.com/itm/126889228254',
+        'medium': 'https://www.ebay.com/itm/126900844123',
+        'large': 'https://www.ebay.com/itm/126900860332'
+      },
+      '3': {
+        'small': 'https://www.ebay.com/itm/126889218051',
+        'medium': 'https://www.ebay.com/itm/126900845677',
+        'large': 'https://www.ebay.com/itm/126900868934'
+      }
+    };
+
+    // Kép betöltése az imageId alapján
+    const imageContainer = document.getElementById('image-container');
+    const image = document.getElementById('image');
+    image.src = imageSources[imageId];
+
+    // Gombokhoz események hozzárendelése
+    document.getElementById('small').onclick = function() {
+      window.location.href = links[imageId]['small'];
+    };
+
+    document.getElementById('medium').onclick = function() {
+      window.location.href = links[imageId]['medium'];
+    };
+
+    document.getElementById('large').onclick = function() {
+      window.location.href = links[imageId]['large'];
+    };
+  </script>
+  
+</body>
+</html>
