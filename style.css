@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'sigma';
+    src: url(./Moderniz.otf);
+}
+
+@media (max-width:768px)
+{
+    .gallery-item
+    {
+        width: 95%;
+    }
+    .caption
+    {
+        font-size: 16px;
+    }
+}
+h1
+{
+    font-family: 'sigma';
+    text-align: center;
+}
+body {
+    font-family: 'sigma';
+    margin: 0;
+    padding: 0;
+    background-color:floralwhite;
+  }
+  
+  /* Scrollable gallery container */
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  /* Individual gallery items */
+.gallery-item {
+    width: 80%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effect */
+.gallery-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image styling */
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Caption styling */
+.caption {
+    padding: 20px;
+    background: black;
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: bold;
+  }
+  
